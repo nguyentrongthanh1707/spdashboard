@@ -1,0 +1,72 @@
+﻿@model SP_Dashboard.Models.ACCOUNT
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/Login_style.css" rel="stylesheet" />
+    <link href="~/Content/css/reset.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="row justify-content-center login">
+        <div class="form">
+            @using (Html.BeginForm("Login", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-content", role = "form" }))
+    {
+
+        <div class="imgcontainer">
+            <p>Welcome</p>
+        </div>
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        <div class="container">
+            <label><b>Email</b></label>
+            @* <input type="text" placeholder="Enter Email" name="EMAIL" id="EMAIL" required>*@
+            @Html.TextBoxFor(m => m.EMAIL, new { @class = "form-control", type = "Email" })
+            @Html.ValidationMessageFor(m => m.EMAIL)
+            <label><b>Password</b></label>
+            @*<input type="password" placeholder="Enter Password" name="PASSWORD" id="PASSWORD" required>*@
+            @Html.PasswordFor(m => m.PASSWORD, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PASSWORD)
+            <div class="container-btnlogin">
+                <button type="submit">Login</button>
+            </div>
+        </div>
+        @*<div class="form-group">
+        <label class="col-md-2 control-label">Email</label>
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.EMAIL, new { @class = "form-control", type = "Email" })
+            @Html.ValidationMessageFor(m => m.EMAIL)
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">Password</label>
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.PASSWORD, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.PASSWORD)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Log in" class="btn btn-default" />
+        </div>
+    </div>
+    <p>
+        @Html.ActionLink("Register", "Register") if you don't have a local account.
+    </p>*@
+}
+        </div>
+    </div>
+</body>
+</html>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

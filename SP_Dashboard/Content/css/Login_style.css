@@ -1,0 +1,77 @@
+/* Login-form */
+/* Full-width input fields */
+.login input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Set a style for all buttons */
+.login button {
+    background-color: #3a8799;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.login button:hover {
+    opacity: 0.8;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+.container {
+    padding: 15px;
+}
+.container-btnlogin{
+    padding: 15px 0 32px 0;
+}
+.login span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.login p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #686868;
+}
+.login b {
+    color: #686868;
+}
+/* (background) */
+.login .form {
+    display: block;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px;
+
+}
+/* Content/Box */
+.login .form-content {
+    border: solid 1px #dcdcdc;
+    background-color:#f9f9f9 ;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 30%; /* Could be more or less, depending on screen size */
+    box-shadow: 1px 1px 5px #dcdcdc;
+    border-radius: 3px;
+
+}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 1024px) {
+    .login span.psw {
+        display: block;
+        float: none;
+    }
+    .login .form-content {
+        width: 80%;
+    }
+}

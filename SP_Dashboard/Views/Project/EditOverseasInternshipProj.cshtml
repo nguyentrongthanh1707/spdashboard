@@ -1,0 +1,112 @@
+﻿@model SP_Dashboard.Models.OverseasInternship
+<section class="content-header">
+    <span><a href="@Url.Action("Index","Project")"><i class="fa fa-angle-double-left"></i>Back To Projects List</a></span>
+</section>
+<section class="content padding-bottom container-fluid">
+    <div class="box box-primary center-block">
+        <div class="form-header">
+            <h4 class="title">Edit Project @Model.PROJECT_REFERENCE</h4>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-body form-box center-block">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.HiddenFor(model => model.PROJECT_ID, new { @class = "form-control" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROJECT_REFERENCE)
+
+                    @Html.TextBoxFor(model => model.PROJECT_REFERENCE, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PROJECT_REFERENCE, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.INTERNSHIP_PROJECT_TYPE_ID)
+                    @Html.DropDownList("INTERNSHIP_PROJECT_TYPE_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.INTERNSHIP_PROJECT_TYPE_ID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROJECT_AREA_ID)
+                    @Html.DropDownList("PROJECT_AREA_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.PROJECT_AREA_ID, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COUNTRY_ID)
+                    @Html.DropDownList("COUNTRY_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.COUNTRY_ID, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COMPANY_ID)
+                    @Html.DropDownList("COMPANY_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.COMPANY_ID, "", new { @class = "text-danger" })
+                </div>
+
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROJECT_SUPERVISOR)
+                    @Html.TextBoxFor(model => model.PROJECT_SUPERVISOR, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PROJECT_SUPERVISOR, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROJECT_ACCEPTANCE_DATE)
+                    <br />
+                    @Html.TextBoxFor(model => model.PROJECT_ACCEPTANCE_DATE, "{0:dd/MM/yyyy}", new { @class = "datepicker" })
+                    @Html.ValidationMessageFor(model => model.PROJECT_ACCEPTANCE_DATE, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.START_DATE)
+                    <br />
+                    @Html.TextBoxFor(model => model.START_DATE, "{0:dd/MM/yyyy}", new { @class = "datepicker" })
+                    @Html.ValidationMessageFor(model => model.START_DATE, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.END_DATE)
+                    <br />
+                    @Html.TextBoxFor(model => model.END_DATE, "{0:dd/MM/yyyy}", new { @class = "datepicker" })
+                    @Html.ValidationMessageFor(model => model.END_DATE, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.REVENUE)
+                    @Html.TextBoxFor(model => model.REVENUE, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.REVENUE, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EXPENSES)
+                    @Html.TextBoxFor(model => model.EXPENSES, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.EXPENSES, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PROJECT_STATUS_ID)
+                    @Html.DropDownList("PROJECT_STATUS_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.PROJECT_STATUS_ID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <span>
+                            Save <i aria-hidden="true" class="fa fa-save"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+        }
+
+    </div>
+</section>
+  
+

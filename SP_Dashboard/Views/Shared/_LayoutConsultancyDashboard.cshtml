@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP DASHBOARD - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body class="hold-transition skin sidebar-mini">
+    <div class="wrapper">
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>SP</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>SP</b>DashBoard</span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="user user-menu dropdown-custom">
+                            @Html.Partial("_LoginPartial")
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-cogs"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="header">MENU</li>
+                    <!-- Optionally, you can add icons to the links -->
+                    <li class="treeview">
+                        <a href="/Dashboard/">
+                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-down pull-right"></i>
+                            </span>
+                        </a>
+                        @*@Html.Partial("_DashBoardPartial")*@
+                        <ul class="treeview-menu">
+                            <li><a href="/Dashboard/ConsultancyCenter/">Consultancy Center</a></li>
+                            <li><a href="/Dashboard/Internship/">Internship</a></li>
+                            <li><a href="/Dashboard/ConsultancyCenter/">Overseas Intersnhip</a></li>
+                            <li><a href="/Dashboard/GLP/">Global Learning Programe</a></li>
+                            <li><a href="/Dashboard/Entrepreuneurship/">Entrepreuneurship</a></li>
+
+                            @*<li><a href="#">Role Management</a></li>*@
+                        </ul>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-user"></i> <span>Account</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-down pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="/Account/">Account Management</a></li>
+                            @*<li><a href="#">Role Management</a></li>*@
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-list"></i> <span>Management</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-down pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="@Url.Action("Index","Project")">Project Management</a></li>
+                            <li><a href="@Url.Action("Index","Personnel")">Personnel Management</a></li>
+                            <li><a href="#">Data Uploading</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.sidebar-menu -->
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            @RenderBody()
+
+        </div>
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="pull-right hidden-xs">
+            </div>
+            <!-- Default to the left -->
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Create the tabs -->
+            <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+                <li class="active"><a href="#" data-toggle="tab"><i class="fa fa-cogs"></i></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Home tab content -->
+                <div class="tab-pane active" id="control-sidebar-home-tab">
+                    <button type="submit" class="btn btn-all control-sidebar-btn">Import</button>
+
+                    <label><input type="checkbox" id="checkbox1" checked><span class="checkbox-hide">No. of projects</span></label>
+                    <div id="autoUpdate1" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Month</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Project type</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label><input type="checkbox" id="checkbox2" checked><span class="checkbox-hide">No. of projects status</span></label>
+                    <div id="autoUpdate2" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Month</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Project type</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label><input type="checkbox" id="checkbox3" checked><span class="checkbox-hide">No. of staff and training hours</span></label>
+                    <div id="autoUpdate3" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Month</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Project type</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label><input type="checkbox" id="checkbox4" checked><span class="checkbox-hide">No. of student and training hours</span></label>
+                    <div id="autoUpdate4" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Month</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Project type</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label><input type="checkbox" id="checkbox5" checked><span class="checkbox-hide">Revenue, costs and profit/loss</span></label>
+                    <div id="autoUpdate5" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Month</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Project type</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label><input type="checkbox" id="checkbox6" checked><span class="checkbox-hide">No. of external consultant</span></label>
+                    <div id="autoUpdate6" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Month</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Project type</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label><input type="checkbox" id="checkbox7" checked><span class="checkbox-hide">Project</span></label>
+                    <div id="autoUpdate7" class="autoUpdate">
+                        <div class="filter-group">
+                            <div class="group-header">
+                                <h6 class="title">Filter By</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Countries</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Consultancy centre</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Year</label>
+                            </div>
+                        </div>
+
+                        <div class="chart-group">
+                            <div class="group-header">
+                                <h6 class="title">Chart</h6>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Column</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Line</label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio">Pie</label>
+                            </div>
+                        </div>
+
+                        <div class="table-group">
+                            <div class="group-header">
+                                <h6 class="title">Table</h6>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="">Table</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-all control-sidebar-btn">Export</button>
+
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+        </aside>
+
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED JS SCRIPTS -->
+
+
+    @RenderSection("scripts", required: false)
+    <!-- AdminLTE App -->
+    <script src="~/Scripts/js/custom.min.js"></script>
+    <!-- User scripts -->
+    <script src="~/Scripts/Scripts.js"></script>
+    <script src="~/Scripts/js/Main_Js.js"></script>
+</body>
+</html>

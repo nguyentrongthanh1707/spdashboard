@@ -1,0 +1,163 @@
+﻿@model SP_Dashboard.Models.ConsultancyCentre
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Project ID: @Model.PROJECT_REFERENCE</h3>
+                <div class="box-tools pull-right">
+                    @Html.ActionLink("Edit this project", "EditConsultancyProj", new { projectId = Model.PROJECT_ID }, new { @class = "projectUrl" })
+                </div>
+            </div>
+            <div class="row box-body">
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label> @Html.DisplayNameFor(model => model.PROJECT_REFERENCE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        @Html.DisplayFor(model => model.PROJECT_REFERENCE)
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label> @Html.DisplayNameFor(model => model.PROJECT_TITLE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p> @Html.DisplayFor(model => model.PROJECT_TITLE)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label> @Html.DisplayNameFor(model => model.CONSULTANCY_PROJECT_TYPE_NAME)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p> @Html.DisplayFor(model => model.CONSULTANCY_PROJECT_TYPE_NAME)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label> @Html.DisplayNameFor(model => model.UEN)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p> @Html.DisplayFor(model => model.UEN)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.CONSULTANCY_CENTRE_NAME)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.CONSULTANCY_CENTRE_NAME)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.COMPANY_NAME)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.COMPANY_NAME)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.CONTACT_PERSON)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.CONTACT_PERSON)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.PROJECT_ACCEPTANCE_DATE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.PROJECT_ACCEPTANCE_DATE)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.START_DATE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.START_DATE)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.END_DATE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.END_DATE)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.OVERSEAS_COUNTRY_ID)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.COUNTRY_NAME)</p>
+                    </div>
+                </div>
+
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.NO_OF_STAFFS)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.NO_OF_STAFFS)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.NO_OF_STUDENTS)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.NO_OF_STUDENTS)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.REVENUE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.REVENUE)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.CONSUMABLES_COST)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.CONSUMABLES_COST)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.FACILITY_COST)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.FACILITY_COST)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.PROJECT_COMPLETTION_DATE)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.PROJECT_COMPLETTION_DATE)</p>
+                    </div>
+                </div>
+                <div class="clear-after">
+                    <div class="col-md-3">
+                        <label>@Html.DisplayNameFor(model => model.PROJECT_STATUS_NAME)</label>
+                    </div>
+                    <div class="col-md-9">
+                        <p>@Html.DisplayFor(model => model.PROJECT_STATUS_NAME)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                @Html.ActionLink("Edit this project", "EditConsultancyProj", new { projectId = Model.PROJECT_ID }, new { @class = "projectUrl" })
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+﻿@using SP_Dashboard.Models
+@model IEnumerable<SP_Dashboard.Models.ACCOUNT>
+@{
+    ViewBag.Title = "Account management";
+}
+<!-- Content Wrapper. Contains page content -->
+<section class="content-header">
+    <h1>
+        Account Management        
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>        
+        <li class="active">Account list</li>
+    </ol>
+</section>
+<section class="content-header">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right btn-custom">
+                <a href="@Url.Action("Create", "Account")" class="btn btn-primary"><i class="fa fa-plus"></i> New Account</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content container-fluid">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <a>@item.FULLNAME</a>
+                        <span class="pull-right">
+                            <a title="Edit" href="@Url.Action("Edit", new { id = item.ACCOUNT_ID })">
+                                Edit
+                            </a>
+                            <span>|</span>
+                            <a title="Delete" class="deleteAcc" href="javascript:void(0)" data-id=@item.ACCOUNT_ID>
+                                Delete
+                            </a>
+                        </span>
+                    </div>
+                    <div class="row box-body">
+                        <div class="col-md-6 info">
+                            <img src="~/Content/img/user_picture.png" />
+                        </div>
+                        <div class="col-md-6 info">
+                            <p><span>Email :</span>  @Html.DisplayFor(modelItem => item.EMAIL)</p>
+                            <p><span>Role :</span>  @Html.DisplayFor(modelItem => item.ROLE.ROLE_NAME)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="clearfix"></div>
+    <div class="row margin-top">
+
+    </div>
+    <!---------Pagination------>
+    <div class="clearfix"></div>
+    <div class="text-center margin-top">
+        <div id="pagination"></div>
+    </div>
+</section>
+<div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header alert alert-danger">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Information Dialog</h4>
+            </div>
+            <div class="modal-body">
+                <p class="success-message">Are you sure to delete this record ? </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success delete-confirmAccount">Ok</button>
+                <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of the boostrap modal popup -->

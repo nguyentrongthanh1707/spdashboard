@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="985ca7e66dc54c65befddc5bc1dd0dcc" Name="Diagram1">
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.ACADEMIC_YEAR" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.ACCOUNT" Width="1.5" PointX="3" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.ACCOUNT_DASHBOARD_RELATIONSHIP" Width="1.5" PointX="5.25" PointY="29" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.ACCOUNT_FUNCTION_RELATIONSHIP" Width="1.5" PointX="13.25" PointY="33.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.COMPANY" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.CONSULTANCE_PROJECT_STAFF_RELATIONSHIP" Width="1.5" PointX="10.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP" Width="1.5" PointX="10.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.CONSULTANCY_CENTRE" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.CONSULTANCY_PROJECT_TYPE" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.COUNTRY" Width="1.5" PointX="0.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.COURSE" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.DASHBOARD_TYPE" Width="1.5" PointX="3" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.ELEARNING_OVERSEAS_PARTNER" Width="1.5" PointX="3" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.EVENT" Width="1.5" PointX="3" PointY="24.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.EXTERNAL_CONSULTANCT_PROJECT_RELATIONSHIP" Width="1.5" PointX="7.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.FUNCTION" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.GLP_PROGRAMME" Width="1.5" PointX="8" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.GLP_PROGRAMME_TRAINER" Width="1.5" PointX="13.25" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.GLP_THEME" Width="1.5" PointX="5.75" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.GLP_TRAINING_TYPE" Width="1.5" PointX="11" PointY="31.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.INTERNSHIP_PROJECT" Width="1.5" PointX="14.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.INTERNSHIP_PROJECT_FOR_OVERSEAS" Width="1.5" PointX="8.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.INTERNSHIP_PROJECT_FOR_OVERSEAS_STUDENT_RELATIONSHIP" Width="1.5" PointX="13.5" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.INTERNSHIP_PROJECT_STUDENT_RELATIONSHIP" Width="1.5" PointX="16.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.INTERNSHIP_PROJECT_TYPE" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.INVESTOR" Width="1.5" PointX="3" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.MENTOR_DETAIL" Width="1.5" PointX="5.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.MENTOR_GROUP" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.MENTOR_TYPE" Width="1.5" PointX="3" PointY="39.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.MODULE" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.OVERSEAS_LO_RELATIONSHIP" Width="1.5" PointX="13.5" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.PROJECT_AREA" Width="1.5" PointX="6" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.PROJECT_STATUS" Width="1.5" PointX="3" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.REMUNERATION_TYPE" Width="1.5" PointX="3" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.ROLE" Width="1.5" PointX="0.75" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.SCHOOL" Width="1.5" PointX="8.25" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.SEMESTER" Width="1.5" PointX="8.25" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.SPACE_UTILISATION" Width="1.5" PointX="8.25" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.STAFF" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.STARTUP_DETAIL" Width="1.5" PointX="10.5" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.STARTUP_INVESTOR_RELATIONSHIP" Width="1.5" PointX="15.75" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.STUDENT" Width="1.5" PointX="11.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.STUDENT_DETAIL_ELEARNING_LOCAL" Width="1.5" PointX="16.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.TYPE_OF_ACCES" Width="1.5" PointX="6" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SP_DASHBOARDModel.YEAR_OF_STUDY" Width="1.5" PointX="8.25" PointY="40.375" IsExpanded="true" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_ACADEMIC_YEAR" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STUDENT_DETAIL_ELEARNING_LOCAL_ACADEMIC_YEAR" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ACCOUNT_DASHBOARD_RELATIONSHIP_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ACCOUNT_FUNCTION_RELATIONSHIP_ACCOUNT" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ACCOUNT_ROLE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ACCOUNT_DASHBOARD_RELATIONSHIP_DASHBOARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ACCOUNT_FUNCTION_RELATIONSHIP_FUNCTIONS" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_COMPANY_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP_COMPANY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ENTREPRENEURSHIP_SPACE_UTILISATION_COMPANY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_COMPANY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_MENTOR_DETAIL_COMPANY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STAFF_RELATIONSHIP_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STAFF_RELATIONSHIP_STAFF" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_SCHOOL" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_SEMESTER" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCE_PROJECT_STUDENT_RELATIONSHIP_YEAR_OF_STUDY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP_CONSULTANCY_CENTRE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP_CONSULTANCY_PROJECT_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP_DASHBOARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP_PROJECT_STATUS" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_EXTERNAL_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP_CONSULTANCY_CENTRE_PROJECT_RELATIONSHIP" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ELEARNING_OVERSEAS_PARTNER_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_EVENTS_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_GLP_PROGRAMME_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INVESTOR_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_MENTOR_DETAIL_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_OVERSEAS_LO_RELATIONSHIP_COUNTRY" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STUDENT_DETAIL_ELEARNING_LOCAL_COURSE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_GLP_PROGRAMME_DASHBOARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_DASHBOARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_DASHBOARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STARTUP_DETAIL_DASHBOARD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_FUNCTIONS_MODULES" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_GLP_PROGRAMME_GLP_THEME" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_GLP_PROGRAMME_SCHOOL" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_GLP_PROGRAMME_TRAINER_GLP_PROGRAMME" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_GLP_PROGRAMME_TRAINER_GLP_TRAINING_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_INTERNSHIP_PROJECT_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_STUDENT_RELATIONSHIP_INTERNSHIP_PROJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_INTERNSHIP_PROJECT_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_PROJECT_AREA" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_PROJECT_STATUS" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_STUDENT_RELATIONSHIP_INTERNSHIP_PROJECT_FOR_OVERSEAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_OVERSEAS_LO_RELATIONSHIP_INTERNSHIP_PROJECT_FOR_OVERSEAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_FOR_OVERSEAS_STUDENT_RELATIONSHIP_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_INTERNSHIP_PROJECT_STUDENT_RELATIONSHIP_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STARTUP_INVESTOR_RELATIONSHIP_INVESTOR" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_MENTOR_DETAIL_MENTOR_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_MENTOR_DETAIL_MENTOR_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_MENTOR_DETAIL_SCHOOL" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_MENTOR_DETAIL_SPDB_REMUNERATION_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_OVERSEAS_LO_RELATIONSHIP_SCHOOL" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STUDENT_DETAIL_ELEARNING_LOCAL_SCHOOL" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STUDENT_DETAIL_ELEARNING_LOCAL_SEMESTER" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_ENTREPRENEURSHIP_SPACE_UTILISATION_TYPE_OF_ACCES" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STARTUP_INVESTOR_RELATIONSHIP_STARTUP_DETAIL" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.FK_STUDENT_DETAIL_ELEARNING_LOCAL_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="SP_DASHBOARDModel.STARTUP_MENTOR_RELATIONSHIP" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

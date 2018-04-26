@@ -1,0 +1,60 @@
+﻿@model SP_Dashboard.Models.RegisterViewModel
+@{
+
+    ViewBag.Title = "Create new account";
+}
+<section class="content-header">
+    <h1>
+        Create new account
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Create new account</li>
+    </ol>
+</section>
+<!-------------------------------------------------Main content ---------------------------------->
+<section class="content container-fluid">
+    <div class="box box-primary center-block">
+        <div class="box-header with-border">
+            <h3 class="box-title">Create New Account</h3>
+        </div>
+        @using (Html.BeginForm("Create", "Account", FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="box-body center-block">
+                <div class="form-group">
+                    <label>User Name</label>
+                    <input type="text" class="form-control" id="" placeholder="User Name">
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password)
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword)
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.RoleID)
+                    @Html.DropDownList("RoleID", null, "--Select--", new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(m => m.RoleID)
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary pull-right">
+                    Save
+                </button>
+                <a href="@Url.Action("Index", "Account")" class="btn btn-default">Back To Accounts List</a>
+            </div>
+        }
+    </div>
+</section>
+<!-- /.content -->
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@

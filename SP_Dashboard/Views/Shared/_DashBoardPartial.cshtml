@@ -1,0 +1,28 @@
+﻿@using SP_Dashboard.Models;
+@{
+    SP_DASHBOARDEntities db = new SP_DASHBOARDEntities();
+    HttpContextBase currentContext = new HttpContextWrapper(HttpContext.Current);
+    RouteData routeData = RouteTable.Routes.GetRouteData(currentContext);
+    bool actived = (routeData.Values["controller"] + "").ToLower() == "consultancy" 
+        || (routeData.Values["controller"] + "").ToLower() == "internship" 
+        || (routeData.Values["controller"] + "").ToLower() == "overseas"
+        || (routeData.Values["controller"] + "").ToLower() == "glp"
+        || (routeData.Values["controller"] + "").ToLower() == "entre";
+}
+
+<ul class="treeview-menu">
+    @if (UserManager.Authenticated)
+    {
+        int i = 0;
+        var query = from u in db.ACCOUNT_DASHBOARD_RELATIONSHIP
+            join y in db.DASHBOARD_TYPE on u.DASHBOARD_TYPE_ID equals y.DASHBOARD_TYPE_ID
+            where u.ACCOUNT_ID == UserManager.GetUserId
+            select new {AccountID = u.ACCOUNT_ID, DashboardName = y.DASHBOARD_TYPE_NAME};
+        foreach (var item in query)
+        {
+            <li class="@(actived ? "active" : "")"><a href="#"><i class="fa fa-pie-chart"></i> @item.DashboardName</a></li>
+            i++;
+        }
+    }
+</ul>
+

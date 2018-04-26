@@ -1,0 +1,19 @@
+﻿@using SP_Dashboard.App_Start.Classes;
+@using SP_Dashboard.Models;
+@{
+    SP_DASHBOARDEntities db = new SP_DASHBOARDEntities();
+}
+@if (UserManager.Authenticated)
+{
+    var query = from u in db.ACCOUNT_FUNCTION_RELATIONSHIP
+                join y in db.FUNCTIONS on u.FUCNTION_ID equals y.FUNCTION_ID
+                where u.ACCOUNT_ID == UserManager.GetUserId
+                select new { AccountID=u.ACCOUNT_ID, FunctionName=y.FUNCTION_NAME, FunctionUrl= y.FUNCTION_FORM_URL};
+    <ul class="nav navbar-nav">
+
+        @foreach(var item in query)
+        {
+            <li><a href="@item.FunctionUrl">@item.FunctionName</a></li>
+        }
+    </ul>
+}

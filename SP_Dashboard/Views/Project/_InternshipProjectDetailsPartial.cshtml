@@ -1,0 +1,71 @@
+﻿@model SP_Dashboard.Models.Internship
+<div class="row title">
+    <div class="col-md-12">
+        <p>@Model.INTERNSHIP_REFERENCE Information</p>
+    </div>
+</div>
+<div class="row body">
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.INTERNSHIP_REFERENCE)</label>
+        </div>
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.INTERNSHIP_REFERENCE)
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.INTERNSHIP_PROJECT_TYPE_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p> @Html.DisplayFor(model => model.INTERNSHIP_PROJECT_TYPE_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.COUNTRY_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p> @Html.DisplayFor(model => model.COUNTRY_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.UEN)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.UEN)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.COMPANY_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.COMPANY_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.CONTACT_PERSON)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.CONTACT_PERSON)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.SCORE)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.SCORE)</p>
+        </div>
+    </div>
+   
+</div>
+<div class="row footer">
+    @Html.ActionLink("Edit Project", "EditInternshipProj", new { dashboardId = Model.DASHBOARD_TYPE_ID, projectId = Model.INTERNSHIP_ID }, new { @class = "projectUrl" })
+
+</div>
+

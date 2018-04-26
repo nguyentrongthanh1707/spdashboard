@@ -1,0 +1,41 @@
+﻿@model SP_Dashboard.Models.DASHBOARD_TYPE
+@{
+    ViewBag.Title = "Project management";
+
+}
+<section class="content-header">
+    <h1>
+        Project Management
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Project Management</li>
+    </ol>
+</section>
+<section class="content container-fluid">
+    <div class="box box-primary center-block">
+        <div class="box-header with-border">
+            <h3 class="box-title">Select Dashboard</h3>
+        </div>
+        @using (Html.BeginForm("", "", new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="box-body center-block">
+                <div class="form-group">
+                    <label>Dashboard:</label>
+                    @Html.DropDownList("DashboardList", null, "--Select--", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.DASHBOARD_TYPE_ID)
+                </div>
+            </div>
+            <div class="box-footer">
+                <div id="partialPlaceHolder" style="display:none;">
+
+                </div>
+            </div>
+        }
+    </div>
+
+</section>
+
+

@@ -1,0 +1,119 @@
+﻿@model SP_Dashboard.Models.OverseasInternship
+<div class="row title">
+    <div class="col-md-12">
+        <p>@Model.PROJECT_REFERENCE Information</p>
+    </div>
+</div>
+<div class="row body">
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.PROJECT_REFERENCE)</label>
+        </div>
+        <div class="col-md-6">
+            @Html.DisplayFor(model => model.PROJECT_REFERENCE)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.INTERNSHIP_PROJECT_TYPE_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p> @Html.DisplayFor(model => model.INTERNSHIP_PROJECT_TYPE_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.PROJECT_AREA_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p> @Html.DisplayFor(model => model.PROJECT_AREA_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label> @Html.DisplayNameFor(model => model.COUNTRY_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p> @Html.DisplayFor(model => model.COUNTRY_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.UEN)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.UEN)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.COMPANY_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.COMPANY_NAME)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.PROJECT_SUPERVISOR)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.PROJECT_SUPERVISOR)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.PROJECT_ACCEPTANCE_DATE)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.PROJECT_ACCEPTANCE_DATE)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.START_DATE)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.START_DATE)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.END_DATE)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.END_DATE)</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.REVENUE)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.REVENUE)</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.EXPENSES)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.EXPENSES)</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <label>@Html.DisplayNameFor(model => model.PROJECT_STATUS_NAME)</label>
+        </div>
+        <div class="col-md-6">
+            <p>@Html.DisplayFor(model => model.PROJECT_STATUS_NAME)</p>
+        </div>
+    </div>
+</div>
+<div class="row footer">
+    @Html.ActionLink("Edit Project", "EditOverseasInternshipProj", new { dashboardId = Model.DASHBOARD_TYPE_ID, projectId = Model.PROJECT_ID }, new { @class = "projectUrl" })
+
+</div>
+

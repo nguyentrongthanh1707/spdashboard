@@ -1,0 +1,82 @@
+﻿@model SP_Dashboard.Models.Internship
+<section class="content-header">
+    <span><a href="@Url.Action("Index","Project")"><i class="fa fa-angle-double-left"></i>Back To Projects List</a></span>
+</section>
+<section class="content padding-bottom container-fluid">
+    <div class="box box-primary center-block">
+        <div class="form-header">
+            <h4 class="title">Edit Project @Model.INTERNSHIP_REFERENCE</h4>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-body form-box center-block">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.INTERNSHIP_ID, new { htmlAttributes = new { @class = "form-control" } })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.INTERNSHIP_REFERENCE)
+                    @Html.EditorFor(model => model.INTERNSHIP_REFERENCE, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.INTERNSHIP_REFERENCE, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.INTERNSHIP_PROJECT_TYPE_ID)
+                    @Html.DropDownList("INTERNSHIP_PROJECT_TYPE_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.INTERNSHIP_PROJECT_TYPE_ID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COUNTRY_ID)
+                    @Html.DropDownList("COUNTRY_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.COUNTRY_ID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.COMPANY_ID)
+                    @Html.DropDownList("COMPANY_ID", null, new { @class = "form-control form-width" })
+                    @Html.ValidationMessageFor(model => model.COMPANY_ID, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CONTACT_PERSON)
+                    @Html.EditorFor(model => model.CONTACT_PERSON, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CONTACT_PERSON, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SCORE)
+                    @Html.EditorFor(model => model.SCORE, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SCORE, "", new { @class = "text-danger" })
+                </div>
+
+                @*<div class="form-group">
+                        @Html.LabelFor(model => model.NO_OF_STUDENTS)
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NO_OF_STUDENTS, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NO_OF_STUDENTS, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.COST_TO_SP)
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.COST_TO_SP, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.COST_TO_SP, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+
+                <div class="form-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <span>
+                            Save <i aria-hidden="true" class="fa fa-save"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+   

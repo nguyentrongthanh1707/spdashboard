@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Personnel management";
+}
+<section class="content-header">
+    <h1>
+        Personnel Management
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Personnel list</li>
+    </ol>
+</section>
+<section class="content container-fluid">
+    <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" class="nav_link" data_id="1" href="#student">Student</a></li>
+            <li><a data-toggle="tab" class="nav_link" data_id="2" href="#staff">Staff</a></li>
+            <li><a data-toggle="tab" class="nav_link" data_id="3" href="#business">Business</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="student" class="tab-pane fade in active">
+                <div class="container-fluid">
+                    <div id="StudentPartial">
+                    </div>
+                </div>
+            </div>
+            <div id="staff" class="tab-pane fade">
+                <div class="container-fluid">
+                    <div id="StaffPartial">
+                    </div>
+                </div>
+            </div>
+            <div id="business" class="tab-pane fade">
+                <div class="container-fluid">
+                    <div id="BusinessPartial">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</section>
+

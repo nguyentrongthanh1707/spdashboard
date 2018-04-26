@@ -1,0 +1,48 @@
+﻿@using SP_Dashboard.Models
+@model List<ConsultancyCentre>
+<div class="box">
+    <table class="table table-hover table-bordered">
+        <tbody>
+            <tr>
+                <th>Project reference</th>
+                <th>Project title</th>
+                <th>Project type</th>
+                <th>Consultancy centre</th>
+                <th>UEN</th>
+                <th>Company</th>
+                <th>Contact person</th>
+                <th>Project status</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.PROJECT_REFERENCE, "Details", new { dashboardId = item.DASHBOARD_TYPE_ID, projectId = item.PROJECT_ID }, new { @class = "projectUrl" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROJECT_TITLE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CONSULTANCY_PROJECT_TYPE_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CONSULTANCY_CENTRE_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COMPANY_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CONTACT_PERSON)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PROJECT_STATUS_NAME)
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

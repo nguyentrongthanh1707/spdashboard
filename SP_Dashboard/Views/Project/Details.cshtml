@@ -1,0 +1,49 @@
+﻿@using SP_Dashboard.Models
+@{
+    ViewBag.Title = "Project details";
+    var consultancyProj = (ConsultancyCentre)ViewBag.ConsultancyProject;
+    var internshipProj = (Internship)ViewBag.InternshipProject;
+    var overseasInternProj = (OverseasInternship)ViewBag.OverseasInternshipProject;
+}
+@if (null != TempData["alertMessage"])
+{
+    <script type="text/javascript">
+        alert('@TempData["alertMessage"]');
+    </script>
+}
+<section class="content-header">
+    <h1>
+        Project Detail
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Project Detail</li>
+    </ol>
+</section>
+<section class="content-header">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="btn-custom">
+                <a href="@Url.Action("Index", "Project")" class="btn btn-default"><i class="fa fa-backward"></i> Back To Projects List</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content container-fluid">
+    @if (ViewBag.DashboardId == 1)
+{
+    @Html.Partial("_ConsultancyProjectDetailsPartial", consultancyProj);
+}
+else if (ViewBag.DashboardId == 2)
+{
+    @Html.Partial("_InternshipProjectDetailsPartial", internshipProj);
+}
+else if (ViewBag.DashboardId == 3)
+{
+    @Html.Partial("_OverseasInternshipProjectDetailsPartial", overseasInternProj);
+}
+    @*@Html.Partial("_ConsultancyProjectDetailsPartial", consultancyProj)*@
+</section>
+
+
+
